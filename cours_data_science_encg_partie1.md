@@ -1,6 +1,8 @@
 # COURS DE SCIENCE DES DONNÉES
 ## École Nationale de Commerce et de Gestion (ENCG) - 4ème Année
 # AIT ELBERRAH OUSSAMA
+<img width="1389" height="989" alt="image" src="https://github.com/user-attachments/assets/6bba7567-2db4-4b15-a705-4c586c2bb83c" />
+
 ---
 
 # PARTIE 1 : FONDAMENTAUX DE LA SCIENCE DES DONNÉES
