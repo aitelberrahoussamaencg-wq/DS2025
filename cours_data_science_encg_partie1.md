@@ -284,6 +284,8 @@ axes[1, 1].set_title('Q-Q Plot (Test de normalité)', fontsize=14, fontweight='b
 
 plt.tight_layout()
 plt.show()
+
+<img width="1389" height="989" alt="image" src="https://github.com/user-attachments/assets/6bba7567-2db4-4b15-a705-4c586c2bb83c" />
 ```
 
 ### 2.3 Statistiques Inférentielles
