@@ -287,7 +287,8 @@ axes[1, 1].set_title('Q-Q Plot (Test de normalité)', fontsize=14, fontweight='b
 plt.tight_layout()
 plt.show()
 
-<img width="1389" height="989" alt="image" src="https://github.com/user-attachments/assets/cfd9e787-f4da-4a3a-95b7-c9730ea95a83" />
+<img width="1389" height="989" alt="image" src="https://github.com/user-attachments/assets/1fae0419-e84f-445e-878d-4a85192daef0" />
+
 
 ```
 
