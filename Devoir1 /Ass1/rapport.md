@@ -13,7 +13,7 @@
 
 ---
 
-## 🎯 Thème et Objectif
+## Thème et Objectif
 
 Ce jeu de données concerne la **surveillance de la qualité de l'air** dans un environnement urbain fortement pollué. Il contient les réponses d'un dispositif multicapteur chimique déployé sur le terrain dans une ville italienne, au niveau de la route, dans une zone significativement polluée.
 
@@ -21,7 +21,7 @@ Le dataset a été conçu pour permettre l'étude et la **calibration de capteur
 
 ---
 
-## 📝 Description Détaillée
+## Description
 
 ### Contexte et Collecte des Données
 
@@ -119,7 +119,7 @@ Ces caractéristiques reflètent les conditions réelles d'utilisation et consti
 
 ---
 
-## 📚 Références Scientifiques
+## Références Scientifiques
 
 ### Publication Introductive
 
@@ -146,7 +146,7 @@ Cette publication décrit en détail la méthodologie de calibration sur le terr
 
 ---
 
-## 💾 Accès et Téléchargement
+## Accès et Téléchargement
 
 ### Fichiers Disponibles
 
@@ -236,7 +236,7 @@ Ce dataset présente un intérêt majeur pour :
 
 ---
 
-## 📈 Conclusion
+## Conclusion
 
 Le dataset **Air Quality UCI** constitue une ressource précieuse et unique pour la communauté scientifique, offrant un an complet de données réelles de qualité de l'air collectées en environnement urbain pollué. Sa richesse provient non seulement de sa taille et de sa durée, mais aussi de la présence simultanée de mesures de référence certifiées et de réponses de capteurs chimiques, permettant ainsi le développement et la validation de modèles de calibration robustes.
 
