@@ -1,5 +1,9 @@
 # AIT ELBERRAH OUSSAMA
 <img width="320" height="426" alt="image" src="https://github.com/user-attachments/assets/b1b3ae71-7234-498b-a040-e4635c84c2c1" />
+<img width="1276" height="1178" alt="image" src="https://github.com/user-attachments/assets/920a308c-00af-4864-9e4a-4f22a4a5275e" />
+<img width="1590" height="1506" alt="image" src="https://github.com/user-attachments/assets/1a146809-664d-4d04-9f37-4707a9a792f0" />
+
+
 
 
 ## Vue d'ensemble du Dataset
