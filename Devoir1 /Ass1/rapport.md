@@ -2,7 +2,7 @@
 <img width="320" height="426" alt="image" src="https://github.com/user-attachments/assets/b1b3ae71-7234-498b-a040-e4635c84c2c1" />
 
 
-## 📊 Vue d'ensemble du Dataset
+## Vue d'ensemble du Dataset
 
 **Source :** UCI Machine Learning Repository  
 **Identifiant :** Dataset #360  
