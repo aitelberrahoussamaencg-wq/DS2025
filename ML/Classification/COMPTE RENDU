@@ -1,1 +1,202 @@
+##AIT ELBERRAH OUSSAMA
+# Rapport d'Analyse : Qualité du Vin Blanc
 
+## 1. Introduction
+
+### 1.1 Contexte de l'analyse
+Ce rapport présente une analyse approfondie du dataset Wine Quality (vin blanc), un jeu de données provenant du référentiel UCI Machine Learning Repository. L'analyse explore les caractéristiques physico-chimiques qui influencent la qualité du vin blanc.
+
+### 1.2 Source des données
+- **Dataset** : Wine Quality - White Wine
+- **Source initiale** : http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv
+- **Taille** : 4898 échantillons
+- **Variables** : 12 colonnes (11 variables physico-chimiques + 1 variable cible)
+
+## 2. Objectif de l'étude
+
+L'objectif principal de cette analyse est de **classifier la qualité du vin blanc** en fonction de ses propriétés chimiques mesurables. Le problème a été reformulé en classification binaire :
+- **Classe 0** : Mauvais vin (qualité ≤ 5)
+- **Classe 1** : Bon vin (qualité > 5)
+
+## 3. Méthodologie
+
+### 3.1 Approche analytique
+
+L'analyse suit une approche structurée de Machine Learning supervisé :
+
+1. **Chargement et exploration des données**
+   - Import depuis l'UCI ML Repository
+   - Vérification de l'intégrité (pas de valeurs manquantes)
+
+2. **Analyse exploratoire**
+   - Distribution des variables via boxplots
+   - Matrice de corrélation (heatmap)
+   - Analyse de la distribution des classes
+
+3. **Préparation des données**
+   - Binarisation de la variable cible
+   - Division train/validation/test (approx. 33%/33%/33%)
+   - Normalisation avec StandardScaler
+
+4. **Modélisation**
+   - Algorithme : K-Nearest Neighbors (KNN)
+   - Sélection du nombre de voisins optimal (k = 1 à 37 par pas de 2)
+   - Évaluation sur ensemble de validation
+
+### 3.2 Outils utilisés
+
+```python
+# Principales bibliothèques
+- pandas : manipulation de données
+- numpy : calculs numériques
+- matplotlib & seaborn : visualisation
+- sklearn : machine learning
+  - KNeighborsClassifier
+  - train_test_split
+  - StandardScaler
+  - accuracy_score
+```
+
+## 4. Analyse des Visualisations
+
+### 4.1 Boxplot des Variables
+
+![Boxplot description](Description du premier graphique)
+
+**Observations clés** :
+- **fixed acidity** : distribution asymétrique avec quelques outliers supérieurs
+- **volatile acidity** : présence d'outliers importants (> 1.0)
+- **residual sugar** : forte variabilité avec valeurs extrêmes
+- **density** : distribution très concentrée autour de 0.99-1.00
+- **pH** : distribution relativement symétrique (3.0-3.5)
+- **alcohol** : large plage de variation (8-14%)
+
+**Interprétation** :
+Les boxplots révèlent que certaines variables comme le sucre résiduel et l'acidité volatile présentent des outliers significatifs qui pourraient influencer les performances du modèle.
+
+### 4.2 Matrice de Corrélation
+
+![Heatmap description](Description du deuxième graphique)
+
+**Corrélations significatives identifiées** :
+- **Corrélation positive forte** :
+  - Density ↔ Residual sugar (attendu, le sucre augmente la densité)
+  
+- **Corrélation négative forte** :
+  - Density ↔ Alcohol (l'alcool diminue la densité)
+  - Fixed acidity ↔ pH (relation acide-base attendue)
+
+- **Corrélations modérées** :
+  - Total SO₂ ↔ Free SO₂ (logique chimique)
+
+**Implications** :
+La présence de corrélations indique une redondance potentielle entre certaines variables. Une sélection de features ou une réduction de dimensionnalité pourrait améliorer les performances.
+
+### 4.3 Distribution des Classes de Qualité
+
+**Avant binarisation** :
+```
+Qualité 6 : 2198 vins (45%)
+Qualité 5 : 1457 vins (30%)
+Qualité 7 : 880 vins (18%)
+Qualités 8, 4, 3, 9 : < 5% chacune
+```
+
+**Après binarisation** :
+- Classe 0 (mauvais) : ~33%
+- Classe 1 (bon) : ~67%
+
+**Observation** :
+Déséquilibre léger des classes avec une majorité de vins classés "bons". Ce déséquilibre a été pris en compte lors de la stratification du split train/test.
+
+## 5. Construction du Modèle
+
+### 5.1 Architecture du workflow
+
+```
+Données brutes (4898 × 12)
+        ↓
+Binarisation de Y
+        ↓
+Split stratifié (33%/33%/33%)
+        ↓
+Normalisation (StandardScaler)
+        ↓
+KNN avec validation croisée
+        ↓
+Sélection du k* optimal
+```
+
+### 5.2 Hyperparamètre k
+
+Le code explore k ∈ {1, 3, 5, ..., 35} pour identifier la valeur optimale minimisant l'erreur de validation.
+
+**Méthode de sélection** :
+```python
+k_star = k_vector[error_val.argmin()]
+```
+
+## 6. Résultats et Performance
+
+### 6.1 Métriques d'évaluation
+
+- **Métrique principale** : Taux d'erreur = 1 - Accuracy
+- **Évaluation** : 
+  - Sur ensemble d'entraînement
+  - Sur ensemble de validation
+
+### 6.2 Normalisation
+
+L'application de `StandardScaler` :
+- Centre les données (moyenne = 0)
+- Réduit l'échelle (écart-type = 1)
+- Améliore les performances du KNN (sensible aux échelles)
+
+## 7. Limites et Recommandations
+
+### 7.1 Limites identifiées
+
+1. **Déséquilibre des classes** : peut biaiser vers la classe majoritaire
+2. **Présence d'outliers** : impact potentiel sur le KNN
+3. **Corrélations élevées** : redondance d'information
+4. **Pas d'évaluation finale** : le test set n'a pas été utilisé dans ce notebook
+
+### 7.2 Recommandations
+
+**Améliorations possibles** :
+
+1. **Feature engineering** :
+   - Transformation log pour variables asymétriques
+   - Interaction entre variables corrélées
+   - Élimination des outliers extrêmes
+
+2. **Modèles alternatifs** :
+   - Random Forest (moins sensible aux outliers)
+   - SVM avec kernel RBF
+   - Gradient Boosting (XGBoost)
+
+3. **Validation** :
+   - K-fold cross-validation
+   - Évaluation finale sur test set
+   - Matrice de confusion détaillée
+
+4. **Optimisation** :
+   - Grid search pour hyperparamètres
+   - Réduction de dimensionnalité (PCA)
+   - Techniques de rééchantillonnage (SMOTE)
+
+## 8. Conclusion
+
+Cette analyse démontre une méthodologie rigoureuse pour la classification de la qualité du vin blanc. Les visualisations ont révélé des patterns intéressants :
+- Forte influence de l'alcool et de la densité
+- Importance des corrélations physico-chimiques
+- Distribution déséquilibrée des classes de qualité
+
+L'approche KNN constitue un bon point de départ, mais des techniques plus sophistiquées pourraient améliorer les performances. La normalisation des données et la sélection d'hyperparamètres par validation sont des pratiques exemplaires correctement appliquées.
+
+---
+
+**Auteur de l'analyse** : Non spécifié dans le notebook  
+**Date d'exécution** : Notebook exécuté 7 fois  
+**Environnement** : Google Colab  
+**Librairies principales** : pandas, numpy, matplotlib, seaborn, scikit-learn
