@@ -2,9 +2,7 @@
 ## AIT ELBERRAH OUSSAMA
 <img width="250" height="350" alt="image" src="https://github.com/user-attachments/assets/47f39567-6707-4584-9e7d-a23a058382c4" />
 
-## Analyse générale du notebook
-
-Vous avez travaillé sur un dataset lié aux indicateurs de santé mentale en lien avec l’activité sur les réseaux sociaux.
+## Social Media Mental Health Prediction
 
 Objectifs
 - comprendre qui utilise les réseaux
