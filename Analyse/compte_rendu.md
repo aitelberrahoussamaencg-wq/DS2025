@@ -1,3 +1,7 @@
+## Social Media Mental Health Prediction
+## AIT ELBERRAH OUSSAMA
+<img width="280" height="250" alt="image" src="https://github.com/user-attachments/assets/63f19444-8459-45ac-99e7-3110f9804064" />
+
 Code:
 ```
 import numpy as np # linear algebra
@@ -37,7 +41,7 @@ from google.colab import drive
 drive.mount('/content/drive')
 ```
 
-Une fois votre Google Drive monté, vous pouvez accéder à vos fichiers en utilisant le chemin `/content/drive/MyDrive/`. Par exemple, si votre fichier `mental_health_social_media_dataset.csv` est dans le dossier racine de votre Drive, le chemin serait le suivant :
+Une fois votre Google Drive monté, vous pouvez accéder à vos fichiers en utilisant le chemin `/content/drive/MyDrive/Colab Notebooks/SOCAIL MEDIA/mental_health_social_media_dataset.csv/`. Par exemple, si votre fichier `mental_health_social_media_dataset.csv` est dans le dossier racine de votre Drive, le chemin serait le suivant :
 
 Code:
 ```
