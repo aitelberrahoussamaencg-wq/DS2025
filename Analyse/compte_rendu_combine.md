@@ -1,3 +1,45 @@
+# Compte rendu et descriptif de l’analyse
+## AIT ELBERRAH OUSSAMA
+<img width="250" height="350" alt="image" src="https://github.com/user-attachments/assets/47f39567-6707-4584-9e7d-a23a058382c4" />
+
+## Analyse générale du notebook
+
+Vous avez travaillé sur un dataset lié aux indicateurs de santé mentale en lien avec l’activité sur les réseaux sociaux.
+
+Objectifs
+- comprendre qui utilise les réseaux
+- analyser comment ils les utilisent
+- identifier les facteurs liés aux états mentaux
+- dégager les tendances observables
+
+Données inspectées
+- temps d’écran
+- nombre de publications
+- interactions sociales
+- humeur
+- catégorie d’état mental
+
+Observations clés
+- variations importantes du temps d’écran
+- répartition inégale des états mentaux
+- comportements sociaux liés à l’intensité d’utilisation
+- corrélations possibles entre usage et humeur
+
+Analyse
+- usage intensif lié à un déséquilibre mental
+- indicateurs sociaux pouvant prédire l’état mental
+- base préparée pour modèle machine learning
+
+Préparation machine learning
+- import des outils
+- nettoyage des données
+- conversion des catégories
+
+Éléments non finalisés
+- modèle final
+- métriques
+- interprétations avancées
+
 Code:
 ```
 import numpy as np # linear algebra
@@ -312,42 +354,3 @@ Si votre fichier se trouve dans un sous-dossier, par exemple un dossier nommé '
 
 ---
 
-# Compte rendu et descriptif de l’analyse
-
-## Analyse générale du notebook
-
-Vous avez travaillé sur un dataset lié aux indicateurs de santé mentale en lien avec l’activité sur les réseaux sociaux.
-
-Objectifs
-- comprendre qui utilise les réseaux
-- analyser comment ils les utilisent
-- identifier les facteurs liés aux états mentaux
-- dégager les tendances observables
-
-Données inspectées
-- temps d’écran
-- nombre de publications
-- interactions sociales
-- humeur
-- catégorie d’état mental
-
-Observations clés
-- variations importantes du temps d’écran
-- répartition inégale des états mentaux
-- comportements sociaux liés à l’intensité d’utilisation
-- corrélations possibles entre usage et humeur
-
-Analyse
-- usage intensif lié à un déséquilibre mental
-- indicateurs sociaux pouvant prédire l’état mental
-- base préparée pour modèle machine learning
-
-Préparation machine learning
-- import des outils
-- nettoyage des données
-- conversion des catégories
-
-Éléments non finalisés
-- modèle final
-- métriques
-- interprétations avancées
