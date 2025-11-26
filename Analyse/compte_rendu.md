@@ -1,7 +1,130 @@
 ## Social Media Mental Health Prediction
 ## AIT ELBERRAH OUSSAMA
 <img width="280" height="350" alt="image" src="https://github.com/user-attachments/assets/63f19444-8459-45ac-99e7-3110f9804064" />
+Objectif
 
+Vous avez travaillé sur un dataset lié aux indicateurs de santé mentale en lien avec l’activité sur les réseaux sociaux.
+Votre but était de comprendre
+
+qui utilise les réseaux
+
+comment ils les utilisent
+
+quels facteurs se lient aux états mentaux
+
+quelles tendances ressortent des données
+
+Données importées
+
+Vous avez chargé un fichier CSV contenant plusieurs variables
+
+temps d’écran quotidien
+
+nombre de publications
+
+interactions sociales
+
+indicateurs d’humeur
+
+catégorie d’état mental
+
+Vous avez affiché
+
+les premières lignes du dataset
+
+les statistiques descriptives
+
+la structure des variables
+
+Ces étapes vous ont montré
+
+la distribution des valeurs
+
+la présence d’écarts importants entre utilisateurs
+
+la cohérence des types de données
+
+Préparation et inspection
+
+Vous avez vérifié le contenu des colonnes pour comprendre
+
+la pertinence de chaque variable
+
+les valeurs manquantes éventuelles
+
+les variations dans le temps d’écran
+
+la répartition des états mentaux
+
+Vous avez produit des visualisations simples pour observer
+
+la distribution du temps d’écran
+
+la fréquence de chaque état mental
+
+Ces graphiques indiquent
+
+un volume important d’utilisateurs avec un usage intensif
+
+des états mentaux déséquilibrés dans certaines classes
+
+une possible corrélation entre usage et humeur
+
+Analyse exploratoire
+
+L'analyse montre
+
+un temps d’écran très variable entre individus
+
+une concentration d’utilisateurs dans quelques catégories mentales
+
+des comportements sociaux liés à l’intensité d’utilisation
+
+Ce que cela suggère
+
+plus le temps d’écran est élevé, plus l’état mental risque d’être affecté
+
+certains comportements sociaux sur la plateforme semblent associés à des changements d’humeur
+
+les indicateurs peuvent servir à prédire une catégorie d’état mental
+
+Approche machine learning (préparation)
+
+Vous avez importé des outils d’apprentissage
+
+LabelEncoder
+
+metrics pour mesurer les performances
+
+modèles de classification potentiels
+
+Ces éléments montrent votre intention de
+
+transformer les données
+
+entraîner un modèle prédictif
+
+mesurer la précision et la qualité des prédictions
+
+Éléments non finalisés
+
+Votre notebook montre la mise en place des imports et des prétraitements, mais pas
+
+le modèle final
+
+ses métriques
+
+son interprétation
+
+Vous avez néanmoins construit une base solide pour
+
+explorer
+
+préparer
+
+visualiser
+
+coder la suite du modèle prédictif
 Code:
 ```
 import numpy as np # linear algebra
