@@ -1,6 +1,6 @@
 ## Social Media Mental Health Prediction
 ## AIT ELBERRAH OUSSAMA
-<img width="280" height="250" alt="image" src="https://github.com/user-attachments/assets/63f19444-8459-45ac-99e7-3110f9804064" />
+<img width="280" height="350" alt="image" src="https://github.com/user-attachments/assets/63f19444-8459-45ac-99e7-3110f9804064" />
 
 Code:
 ```
