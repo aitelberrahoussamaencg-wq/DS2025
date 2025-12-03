@@ -1,4 +1,6 @@
 # Compte Rendu d'Analyse : Prédiction de la Qualité de l'Air
+## AIT ELBERRAH OUSSAMA
+<img width="250" height="400" alt="image" src="https://github.com/user-attachments/assets/0bd0e914-9689-42f2-9f82-1604348cff82" />
 
 ## Introduction
 
